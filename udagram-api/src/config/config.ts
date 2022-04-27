@@ -1,6 +1,8 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
+
+// adding the environment variables from the .env file to the config file
 export const config = {
   username: `${process.env.POSTGRES_USERNAME}`,
   password: process.env.POSTGRES_PASSWORD,
