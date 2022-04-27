@@ -12,6 +12,7 @@ export const config = {
   dialect: "postgres",
   aws_region: process.env.AWS_REGION,
   aws_profile: process.env.AWS_PROFILE,
+  // we created S3 bucket in AWS
   aws_media_bucket: process.env.AWS_BUCKET,
   url: process.env.URL,
   jwt: {
