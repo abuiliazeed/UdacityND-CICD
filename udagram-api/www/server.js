@@ -34,7 +34,7 @@ const model_index_1 = require("./controllers/v0/model.index");
     const app = express_1.default();
     const port = process.env.PORT || 8080;
     app.use(body_parser_1.default.json());
-    app.use(cors_1.default());
+    app.use(cors_1.default({ origin: '*' }));
     app.use("/api/v0/", index_router_1.IndexRouter);
     // Root URI call
     app.get("/", (req, res) => __awaiter(this, void 0, void 0, function* () {
