@@ -19,7 +19,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
-const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
 const sequelize_1 = require("./sequelize");
 const index_router_1 = require("./controllers/v0/index.router");
@@ -34,7 +33,7 @@ const model_index_1 = require("./controllers/v0/model.index");
     const app = express_1.default();
     const port = process.env.PORT || 8080;
     app.use(body_parser_1.default.json());
-    app.use(cors_1.default());
+    //app.use(cors());
     app.use("/api/v0/", index_router_1.IndexRouter);
     // Root URI call
     app.get("/", (req, res) => __awaiter(this, void 0, void 0, function* () {
