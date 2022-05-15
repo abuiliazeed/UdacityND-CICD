@@ -8,6 +8,7 @@
     "start": "ng serve",
     "openssl":"export NODE_OPTIONS=--openssl-legacy-provider",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && ng build",
+    "tsv":"npm install typescript@3.6.0 --save-dev",
     "build-prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
