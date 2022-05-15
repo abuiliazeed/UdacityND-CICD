@@ -35,6 +35,10 @@ jobs:
           command: |
             npm run api:deploy
       - run:
+          name: Install angularcli
+          command: | 
+            sudo npm install -g @angular/cli@latest      
+      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
