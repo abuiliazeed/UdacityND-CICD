@@ -33,11 +33,7 @@ jobs:
       - run:
           name: Back-End Deploy
           command: |
-            npm run api:deploy
-      - run:
-          name: Install angularcli
-          command: | 
-            sudo npm install -g @angular/cli@latest      
+            npm run api:deploy  
       - run:
           name: Front-End Install
           command: |
