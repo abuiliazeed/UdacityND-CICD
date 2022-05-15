@@ -39,6 +39,10 @@ jobs:
           command: |
             npm run frontend:install
       - run:
+          name: Front-End openssl
+          command: |
+            npm run frontend:openssl            
+      - run:
           name: Front-End Build
           command: |
             npm run frontend:build
