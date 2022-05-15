@@ -41,11 +41,7 @@ jobs:
       - run:
           name: Front-End openssl
           command: |
-            npm run frontend:openssl
-      - run:
-          name: Front-End tsv
-          command: |
-            npm run frontend:tsv            
+            npm run frontend:openssl         
       - run:
           name: Front-End Build
           command: |
