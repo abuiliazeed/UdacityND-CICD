@@ -38,10 +38,30 @@ Once the developer has pushed the code to the githup repository, we can trigger 
 ## Pipeline Diagram
 ![CICD Pipeline](https://i.imgur.com/Youy4QB.png "CICD Pipeline")
 
+# Screenshots
+## Circleci Environment Variables Screenshots
+![Circleci Environment Variables](./screenshots/envvariablescircleci.png "Circleci Environment Variables")
+
+## circleci Last Build screenshot
+![circleci Last Build screenshot](./screenshots/circleci.png "circleci Last Build screenshot")
+
+## Elasticbeanstalk Environment Variables Screenshots
+![Elasticbeanstalk Environment Variables](./screenshots/environment-eb.png "Elasticbeanstalk Environment Variables")
+
+## elasticbeanstalk  screenshot
+![elasticbeanstalk screenshot](./screenshots/elasticbeanstalk.png "elasticbeanstalk screenshot")
+
+## AWS RDS screenshot
+![AWS RDS screenshot](./screenshots/rds.png "AWS RDS screenshot")
+
+
+## AWS S3 Bucket screenshot
+![AWS S3 Bucket screenshot](./screenshots/s3bucket.png "AWS S3 Bucket screenshot")
+
 
 # Udagram App Developer Guide
 
-This application is provided by udacity team in order to run it locally follow this guide
+This application is provided by udacity team in order to run it locally or deploy it to the cloud follow this guide
 
 ## Getting Started
 
