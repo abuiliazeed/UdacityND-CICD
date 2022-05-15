@@ -7,16 +7,49 @@
 ## Front End
 [Front End Deployment Link](http://udacityndbucket.s3-website-us-east-1.amazonaws.com/)
 
-# Udagram
+## Infrastructure
+### Front End
+The front end static files build is hosted on AWS S3 bucket with permissions to read and write in order for the user to upload photos for the posts created.
 
-This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
+### Backend
+#### Server
+The server is hosted on AWS Elastic Beanstalk with node environment.
+
+#### Database
+The database is hosted on AWS RDS with PostgreSQL.
+
+#### Architecture Diagram
+![AWS Archticture](https://i.imgur.com/ZTrur2t.png "AWS Archticture Diagram")
+
+# CircleCI for CICD
+We use CircleCI for Continuous Integration and Continuous Delivery
+
+# Trigger pipeline
+Once the developer has pushed the code to the githup repository, we can trigger the pipeline.
+
+## Pipeline Steps
+- Installing Backend Environment and Dependencies
+- Building Backend
+- Deploying Backend to AWS Elastic Beanstalk
+- Installing Front End Environment and Dependencies
+- building Front End
+- Deploying Front End to AWS S3
+
+## Pipeline Diagram
+![CICD Pipeline](https://i.imgur.com/Youy4QB.png "CICD Pipeline")
+
+
+# Udagram App Developer Guide
+
+This application is provided by udacity team in order to run it locally follow this guide
 
 ## Getting Started
 
-1. Clone this repo locally into the location of your choice.
-1. Move the content of the udagram folder at the root of the repository as this will become the main content of the project.
-1. Open a terminal and navigate to the root of the repo
-1. follow the instructions in the installation step
+1. The application consists of two code bases the udagram-api which handle the server and the database connections and the udagram-frontend which handles the front end.
+2. Clone this repo locally into the location of your choice.
+3. Move the content of the udagram folder at the root of the repository as this will become the main content of the project.
+4. Open a terminal and navigate to the root of the repo
+5. follow the instructions in the installation step
 
 The project can run but is missing some information to connect to the database and storage service. These will be setup during the course of the project
 

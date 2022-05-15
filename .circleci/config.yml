@@ -1,28 +1,28 @@
 version: 2.1
 orbs:
-  # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
+  # we will use stable circleci orbs for node, aws-cli and aws-eb
   node: circleci/node@4.1.0
   aws-cli: circleci/aws-cli@2.0.3
   aws-elastic-beanstalk: circleci/aws-elastic-beanstalk@2.0.1
-  # different jobs are calles later in the workflows sections
+  
+  # we will only start the pipeline if the developer deployed to the main branch of the github repo
 triggers:
   - filters:
       branches:
         only:
-          - master
+          - main
 jobs:
   build:
     docker:
-      # the base image can run most needed actions with orbs
+      # We will use this docker image as it is the latest stable version
       - image: "cimg/base:stable"
     steps:
       - node/install:
-          ##node-version: "16.13.2"
           install-yarn: true
       - checkout
       - aws-cli/setup
       - aws-elastic-beanstalk/setup
-      # install dependencies in both apps
+      # we will install the dependencies for the back end and front end apps
       - run:
           name: Back-End Install
           command: |
@@ -47,10 +47,6 @@ jobs:
           name: Front-End Build
           command: |
             npm run frontend:build
-      #- run:
-      #    name: Front-End Test
-      #    command: |
-      #      npm run frontend:test
       - run:
           name: Front-End Deploy
           command: |
